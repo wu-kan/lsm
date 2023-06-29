@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.13.4)
+project(lsm)
+include(CTest)
+include(CPack)
+add_subdirectory(test)

@@ -1,0 +1,5 @@
+add_executable(lsm_test lsm_test.cc)
+target_include_directories(lsm_test PRIVATE ${CMAKE_SOURCE_DIR}/include)
+foreach(_iter 1024 1048576)
+  add_test(NAME test-${_iter} COMMAND lsm_test ${_iter})
+endforeach()
